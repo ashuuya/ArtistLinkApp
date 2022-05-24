@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">MusicLink</string>
+    <string name="artist_name">Rick Astley</string>
+    <string name="source_name">Youtube</string>
+    <string name="link">https://youtu.be/dQw4w9WgXcQ</string>
+</resources>

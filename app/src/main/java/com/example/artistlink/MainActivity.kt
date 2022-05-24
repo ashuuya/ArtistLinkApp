@@ -24,7 +24,6 @@ class MainActivity : AppCompatActivity() {
     lateinit var mService: RetrofitServices
     lateinit var layoutManager: LinearLayoutManager
     lateinit var adapter: InfoAdapter
-    lateinit var progressBar: ProgressBar
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,13 +36,15 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun getAllLinks() {
-        mService.getLinkList("sergey eybog").enqueue(object : Callback<InfoModel> {
+        mService.getLinkList("Hollywood Undead").enqueue(object : Callback<InfoModel> {
             override fun onFailure(call: Call<InfoModel>, t: Throwable) {
+                findViewById<ProgressBar>(R.id.progressBar).visibility = View.INVISIBLE
                 Log.d("tag", t.message!!)
             }
 
             @SuppressLint("NotifyDataSetChanged")
             override fun onResponse(call: Call<InfoModel>, response: Response<InfoModel?>) {
+                findViewById<ProgressBar>(R.id.progressBar).visibility = View.INVISIBLE
                 var infoModel = response.body()
                 if (infoModel != null) {
                     adapter = InfoAdapter(baseContext, infoModel.platforms)

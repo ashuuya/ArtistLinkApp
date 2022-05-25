@@ -10,7 +10,8 @@
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="70dp"
-        android:layout_gravity="center">
+        android:layout_gravity="center"
+        android:hapticFeedbackEnabled="true">
 
         <TextView
             android:id="@+id/sr_text"
@@ -26,8 +27,6 @@
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.cardview.widget.CardView>

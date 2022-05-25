@@ -7,7 +7,7 @@ import retrofit2.http.*
 interface RetrofitServices {
     @Headers(
         "X-RapidAPI-Host: musiclinkssapi.p.rapidapi.com",
-        "X-RapidAPI-Key: eb194c61cdmsh690666316ffae94p1ca362jsn7379733fcfa0"
+        "X-RapidAPI-Key: 656624af09msh62ed6a9b860a0f8p16a3bfjsndbdea8d9fdf6"
     )
     @GET("artist")
     fun getLinkList(@Query("query") query: String): Call<InfoModel>

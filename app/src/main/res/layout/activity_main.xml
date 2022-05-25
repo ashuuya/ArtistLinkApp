@@ -8,7 +8,7 @@
 
 
     <ImageView
-        android:id="@+id/artist_image"
+        android:id="@+id/artistImage"
         android:layout_width="0dp"
         android:layout_height="250dp"
         android:scaleType="centerCrop"
@@ -30,11 +30,12 @@
         android:textColor="@color/black"
         android:textSize="34sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/artist_image"
+        app:layout_constraintBottom_toBottomOf="@+id/artistImage"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/artist_image"
+        app:layout_constraintStart_toStartOf="@+id/artistImage"
         app:layout_constraintTop_toTopOf="parent"
-        tools:text="@string/artist_name" />
+        tools:text="@string/artist_name"
+        tools:ignore="Deprecated" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerLinkList"
@@ -44,7 +45,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/artist_image"
+        app:layout_constraintTop_toBottomOf="@id/artistImage"
         app:layout_constraintVertical_bias="0.0" />
 
     <ProgressBar
@@ -55,5 +56,16 @@
         app:layout_constraintBottom_toBottomOf="@+id/recyclerLinkList"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/artist_image" />
+        app:layout_constraintTop_toTopOf="@+id/artistImage" />
+
+    <SearchView
+        android:id="@+id/searchView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/artistImage"
+        app:layout_constraintVertical_bias="0.295" />
 </androidx.constraintlayout.widget.ConstraintLayout>
